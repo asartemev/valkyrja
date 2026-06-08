@@ -54,10 +54,11 @@ sudo ./valkyrja 3
 
 ---
 
-## 📊 Architectural Bounds Analysis (Top-Down Method)
+## Architectural Bounds Analysis (Top-Down Method)
 
 Traditional CPU metrics like Branch Misprediction and Intel-style TMAM bounds do not map directly to GPU topologies due to hardware latency hiding and thread-group lockstep warps. This monitor translates Mali metrics into logical architectural equivalents:
 
+```
              [ GPU_UTILIZATION (Top-Level Job Activity) ]
                /                                     \
 [ PIXEL_ACTIVE (3D Graphics) ]                   [ COMPUTE_ACTIVE (Compute/ML) ]
@@ -68,7 +69,7 @@ Traditional CPU metrics like Branch Misprediction and Intel-style TMAM bounds do
             |      \                                   |                     \
 [ ALU_LOAD_DERIVED ] [ FRONTEND_STARVE_RATE ]    [ MEMORY_LOAD_BOUND ] [ L2_CACHE_HIT_RATE ]
                           (Front-End Bound)        (Back-End Bound)
-
+```
 
 ### Advanced Top-Down Metrics
 
