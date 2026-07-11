@@ -134,7 +134,7 @@ int main(int argc, char** argv) {
                                 if (current_raw_val >= previous_raw_values[counter_enum]) {
                                     diff = current_raw_val - previous_raw_values[counter_enum];
                                 } else {
-                                    diff = current_raw_val; 
+                                    diff = current_raw_val;
                                 }
 
                                 if (seconds_elapsed > 0.0) {

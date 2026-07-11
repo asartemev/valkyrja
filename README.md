@@ -2,7 +2,11 @@
 
 A lightweight, high-performance C++ command-line utility designed to monitor internal hardware counters of the **Arm Mali-G610 GPU** on **Rockchip RK3588/RK3588S** SoCs.
 
-This application uses the classic **HWCPipe (v1.x)** API to implement an advanced Top-Down style microarchitectural analysis tailored to mobile GPU topologies, bypassing physical hardware limitations to monitor 14 raw parameters and 4 real-time derived indicators.
+This application uses the modern **libGPUCounters (v2.4.0) [ex-HWCPipe]** API to implement an advanced Top-Down style microarchitectural analysis tailored to mobile GPU topologies, bypassing physical hardware limitations to monitor 14 raw parameters and 4 real-time derived indicators.
+
+<p align="center">
+  <img src="assets/screenshot.png" width="600" alt="App GUI Screenshot">
+</p>
 
 ---
 
@@ -22,7 +26,7 @@ This application uses the classic **HWCPipe (v1.x)** API to implement an advance
 
 ### 2. Software & Libraries
 * Linux kernel running the proprietary Arm Mali kernel-space driver (`mali_kbase`).
-* Installed `hwcpipe` v1.x headers and linked shared libraries.
+* Installed [`libGPUCounters`](https://github.com/ARM-software/libGPUCounters) (v2.4.0 or newer) headers and linked shared libraries.
 * GCC/G++ supporting C++17 or higher.
 
 ### 3. Driver Permissions (Critical)
