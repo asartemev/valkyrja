@@ -81,8 +81,8 @@ Traditional CPU metrics like Branch Misprediction and Intel-style TMAM bounds do
                                                      [ ALU_LOAD_DERIVED ]        [ WARP_DIVERGENCE_PENALTY ]     [ MEMORY_LOAD_BOUND ]
                                                          (Retiring)                  (Bad Speculation)           ([L1] Back-End Bound)
                                                                                                                        |
-                                                                                                                       ---------------- [ BUS_READ_STALL ]
-                                                                                                                                    ([L2] Latency/DRAM Bound)
+                                                                                                                       ---------------- [ READ_STALL_IMPACT_RATE ]
+                                                                                                                                        ([L2] Latency/DRAM Bound)
                                                                                                                                                   |
                                                                                                                                                   ---------------- [ L2_CACHE_HIT_RATE ]
                                                                                                                                                              ([L3] Hit Bound / Data Locality)
