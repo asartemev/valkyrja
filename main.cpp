@@ -78,8 +78,9 @@ int main(int argc, char** argv) {
     vector<set<hwcpipe_counter>> bundle_sets = {
         {MaliCoreActiveCy, MaliEngStarveCy, MaliEngDivergedInstrRate},          // Bundle 0: Starvation + Core Analytics
         {MaliAnyUtil, MaliCompQueueActiveCy, MaliCoreUtil, MaliTilerActiveCy},  // Bundle 1: High level activity
-        {MaliALUUtil, MaliFragUtil, MaliLSUtil, MaliVarInstr, MaliTexUtil},     // Bundle 2: Execution Stalls
-        {MaliL2CacheRdLookup, MaliL2CacheRdMissRate, MaliL2CacheWrMissRate},    // Bundle 3: Caching
+        {MaliALUUtil, MaliLSUtil, MaliVarInstr},                                // Bundle 2: Execution Stalls
+        {MaliL2CacheRdLookup, MaliL2CacheRdMissRate, MaliL2CacheWrMissRate,
+         MaliFragUtil, MaliTexUtil},                                            // Bundle 3: Caching + Texture/Pixel
         {MaliExtBusRdBy, MaliExtBusWrBy, MaliExtBusRdStallCy}                   // Bundle 4: Ext Bus Memory
     };
 
