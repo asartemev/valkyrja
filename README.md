@@ -132,7 +132,7 @@ Traditional CPU metrics like Branch Misprediction and Intel-style TMAM bounds do
 * **`TEXTURE_UTILIZATION`**: Tracks the saturation of the hardware texturing units (T-Unit) performing bilinear/trilinear filtering, texture fetches, or image reads/writes.
 * **`TILER_ACTIVE`**: Absolute hardware cycle counter for the fixed-function geometry tiler block, capturing primitive binning, viewport clipping, and tile list generation.
 * **`VARYING_INSTRS`**: Total vector attribute/interpolator actions. **Note:** This metric safely reads `0` during OpenCL, machine learning, or pure compute tasks since compute threads entirely bypass traditional graphics primitive rasterization hardware units.
-* **`COMPUTE_ACTIVE`**: Compute queue transaction metrics. Tracks Compute/ML layer executions (OpenCL/Vulkan Compute) and geometric matrices.
+* **`COMPUTE_ACTIVE`**: Compute queue transaction metrics. Tracks generalized Compute/ML layer executions (OpenCL/Vulkan Compute) and complex geometric matrix transformations.
 
 ---
 
